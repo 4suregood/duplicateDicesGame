@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jumb Game</title>
+	<meta charset="UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/jumb.css" media="screen" />
+	<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="js/jumb.js"></script>
+</head>
+<body>
+
+	<h2>Jumb Game</h2>
+
+<p>
+<h3>Search is from today.</h3>
+<form id="searchAbwaForm" action="">
+
+<table>
+<tr>
+  <td class="label">Agent ID<span class="required">*</span></td>
+  <td><input type="text" name="userId" size="10" value=""></td>
+</tr>
+<tr>
+  <td class="label">Job Type<span class="required">*</span></td>
+  <td><select name="j.typeCode">
+	<option value="">-- Select --</option>
+	<option value="HS">DSL Highspeed</option>
+	<option value="IPTV">IPTV</option>
+	<option value="COIN">Payphone</option>
+	<option value="STV">Satellite TV</option>
+	<option value="VOICE">Voice</option>
+</select>
+	</td>
+</tr>
+
+<tr>
+  <td class="label">Product Category<span class="required">*</span></td>
+  <td><select name="j.productCategoryCode">
+	<option value="">-- Select --</option>
+	<option value="CLEC">CLEC</option>
+	<option value="DSL">DSL</option>
+	<option value="TTV">TV</option>
+	<option value="POTS">Voice</option>
+	</select></td>
+</tr>
+<tr>
+  <td class="label">Technology<span class="required">*</span></td>
+  <td><select name="j.productTechnologyCode">
+	<option value="">-- Select --</option>
+	<option value="COPPER">Copper</option>
+	<option value="COPPER_BONDED">Copper Bonded</option>
+	<option value="ETTS">ETTS</option>
+	<option value="GPON">GPON</option>
+	<option value="SAT">Satellite</option>
+	</select></td>
+</tr>
+
+<tr>
+  <td class="label">Province<span class="required">*</span></td>
+  <td><select name="j.sl.provinceStateCode">
+	<option value="">-- Select --</option>
+	<option value="AB">AB</option>
+	<option value="BC">BC</option>
+	</select></td>
+</tr>
+
+<tr>
+  <td class="label">City<span class="required">*</span></td>
+  <td><input type="text" name="j.sl.cityName" size="50" value=""></td>
+</tr>
+
+<tr>
+  <td class="label">Central Office ID<span class="required">*</span></td>
+  <td><input type="text" name="j.sl.centralOfficeId" size="4" value=""></td>
+</tr>
+
+<tr>
+  <td class="label">Postal Code<span class="required">*</span></td>
+  <td><input type="text" name="j.sl.postalZipCode" size="6" value=""> (no space, for example: V9R3A7)</td>
+</tr>
+
+<tr>
+  <td class="label">Work Group<span class="required">*</span></td>
+  <td><select name="j.workGroupCode">
+	<option value="">-- Select --</option>
+	<option value="Activations - ACT">Activations</option>
+	<option value="ADSL">ADSL</option>
+	<option value="Business TTV">Business TTV</option>
+	<option value="Cable Locate">Cable Locate</option>
+	<option value="Cable Pressure">Cable Pressure</option>
+	<option value="Cable Repair">Cable Repair</option>
+	<option value="Centrex">Centrex</option>
+	<option value="Contractor I&R">Clearnet Single Line</option>
+	<option value="CPS - Dispatch">CPS Dispatch</option>
+	<option value="CSD - CA Cable Maintenance">Cable Maintenance</option>
+	<option value="Data High">Data High</option>
+	<option value="DMC - Business Clerks">DMC - Business Clerks</option>
+	<option value="DMC - Residential Clerks">DMC - Residential Clerks</option>
+	<option value="DMC - Supervisor">DMC - Supervisor</option>
+	<option value="Enhanced Services">Enhanced Services</option>
+	<option value="GOBC">Go BC</option>
+	<option value="Installation & Repair">Installation & Repair</option>
+	<option value="Key Systems">Key Systems</option>
+	<option value="Ladder Truck">Ladder Truck</option>
+	<option value="Mainstream - Data">Mainstream Data</option>
+	<option value="Network Frame">Network Frame</option>
+	<option value="Network Microwave, Radio Tech">Network Microwave, Radio Tech</option>
+	<option value="Network Power">Network Power</option>
+	<option value="Network Prime/Rover">Network Prime (Rover)</option>
+	<option value="Network Special Services">Network Special Services</option>
+	<option value="Network Switching">Network Switching</option>
+	<option value="Network Transport">Network Transport</option>
+	<option value="NOC - Assurance - Access">NOC Assurance - Access</option>
+	<option value="NOC - Assurance - DMS">NOC Assurance - DMS</option>
+	<option value="NOC - Assurance - DMS 10">NOC Assurance - DMS 10</option>
+	<option value="NOC - Assurance - GTD5 / 5E">NOC Assurance - GTD-5/5E</option>
+	<option value="NOC - Assurance - Planet">NOC Assurance - Planet</option>
+	<option value="NOC - Assurance - Transport">NOC Assurance - Transport</option>
+	<option value="NOC - Voice Mail">NOC - Voicemail</option>
+	<option value="NRA - Records">NRA - Records</option>
+	<option value="NSF - PDS PreDelivery Support">NSF - PDS (Pre-Delivery Support)</option>
+	<option value="PABX Systems">PABX Systems</option>
+	<option value="Public WIFI">Public WIFI</option>
+	<option value="Rushman">Rushman</option>
+	<option value="SL1 Systems">SL1 Systems</option>
+	<option value="Special Services">Special Services</option>
+	<option value="TELUS TV">TELUS TV</option>
+	<option value="Translations - Network Core Switching">Translations - Network Core Switching</option>
+	<option value="TTV - Rushman">Rushman</option>
+	<option value="Underground">Underground</option>
+	<option value="Voice - National Centrex">Voice - National Centrex</option>
+	<option value="Voice - Test">Voice Test</option>
+
+	</select></td>
+</tr>
+
+<tr>
+  <td class="label"></td>
+  <td><input type="submit" value="Submit"></td>
+</tr>
+
+</table>
+
+<input type="hidden" name="j.hideOverbook" value="y">
+<input type="hidden" name="j.hideDueDate" value="y">
+<input type="hidden" name="userLanguage" value="en">
+
+
+<!-- Priority:<input type="text" name="j.priorityCode" size="2" value="3"><br> -->
+<input type="hidden" name="j.priorityCode" value="3">
+<!-- Estimated Duration:<input type="text" name="j.estimatedDuration" size="2" value="3"><br> (hours) -->
+<input type="hidden" name="j.estimatedDuration" value="1.75">
+<input type="hidden" name="j.estimatedDurationUomCode" value="HOURS">
+<input type="hidden" name="j.dispatchLocationCode" value="SERVICE">
+<input type="hidden" name="j.sl.locationTypeCode" value="SERVICE">
+
+<!--Work Group not needed to get appt-->
+<input type="hidden" name="j.serviceClassCode" value="R">
+
+<input type="hidden" name="j.projectCode" value="">
+<input type="hidden" name="j.outOfService" value="n">
+<input type="hidden" name="j.sl.addressTypeCode" value="FMS">
+<input type="hidden" name="j.sl.addressId" value="">
+
+<input type="hidden" name="j.sl.buildingName" value="">
+<input type="hidden" name="j.sl.floor" value="">
+<input type="hidden" name="j.sl.houseNumber" value="">
+<input type="hidden" name="j.sl.houseNumberSuffix" value="">
+
+
+
+<input type="hidden" name="j.sl.streetName" value="">
+<input type="hidden" name="j.sl.streetTypeCode" value="">
+<input type="hidden" name="j.sl.streetVector" value="">
+<input type="hidden" name="j.sl.buildingTypeCode" value="">
+<input type="hidden" name="j.sl.unitName" value="">
+<input type="hidden" name="j.sl.locationClli" value="">
+
+<input type="hidden" name="customerName" value="">
+<input type="hidden" name="c.name" value="">
+<input type="hidden" name="c.typeCode" value="CONJ">
+<input type="hidden" name="c.phone" value="5555555555">
+
+<input type="hidden" name="j.wo.originatingSystemId" value="3259">
+<input type="hidden" name="j.wo.originatingSystemWoGroupId" value="">
+<input type="hidden" name="j.wo.originatingSystemWoExtension" value="">
+
+
+
+</form>
+</p>
+
+<table  id="legendTable">
+<caption>Valid Combinations</caption>
+<tr >
+  <th>Job Type</th>
+  <th>Product</th>
+  <th>Technology</th>
+</tr>
+<tr>
+  <td>DSL Highspeed</td>
+  <td>DSL</td>
+  <td>Copper</td>
+</tr>
+<tr>
+  <td>DSL Highspeed</td>
+  <td>DSL</td>
+  <td>Copper-Bonded</td>
+</tr>
+<tr>
+  <td>DSL Highspeed</td>
+  <td>DSL</td>
+  <td>ETTS</td>
+</tr>
+<tr>
+  <td>DSL Highspeed</td>
+  <td>DSL</td>
+  <td>GPON</td>
+</tr>
+
+<tr>
+  <td>IPTV</td>
+  <td>TV</td>
+  <td>Copper</td>
+</tr>
+<tr>
+  <td>IPTV</td>
+  <td>TV</td>
+  <td>Copper-Bonded</td>
+</tr>
+<tr>
+  <td>IPTV</td>
+  <td>TV</td>
+  <td>ETTS</td>
+</tr>
+<tr>
+  <td>IPTV</td>
+  <td>TV</td>
+  <td>GPON</td>
+</tr>
+
+<tr>
+  <td>Satellite</td>
+  <td>TV</td>
+  <td>SAT</td>
+</tr>
+
+<tr>
+  <td>Voice</td>
+  <td>CLEC</td>
+  <td>Copper</td>
+</tr>
+
+<tr>
+  <td>Voice</td>
+  <td>Voice</td>
+  <td>Copper</td>
+</tr>
+<tr>
+  <td>Voice</td>
+  <td>Voice</td>
+  <td>Copper-Bonded</td>
+</tr>
+<tr>
+  <td>Voice</td>
+  <td>Voice</td>
+  <td>ETTS</td>
+</tr>
+<tr>
+  <td>Voice</td>
+  <td>Voice</td>
+  <td>GPON</td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

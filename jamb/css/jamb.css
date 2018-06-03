@@ -1,0 +1,65 @@
+/* -----------------------------------------------------------------------------
+// --- Jamb Game Master Style Sheet
+// -------------------------------------------------------------------------- */
+.center
+{
+	text-align:center;
+}
+
+.noBorder
+{
+	 border:none;
+	 background-color: #fff;
+}
+
+.border
+{
+border: 1px solid #cccccc;
+}
+
+.thWidth
+{
+width: 56px;
+}
+
+.editable
+{
+ 	background-color: #fff;
+}
+
+.closed
+{
+ 	background-color: #F8F8F8;
+}
+
+.selectedN
+{
+ 	background-color: #9DEB9B;
+}
+
+.sum
+{
+	background-color: #E0FFD1;
+	font-weight: bold;
+}
+
+.small
+{
+font-size: 10px;
+}
+
+.grey
+{
+/*background-color: #E6E6E6;*/
+/*background-color: #81DAF5;*/
+background-color: #F0D1FF;
+}
+
+.moveUp
+{
+	margin:0px 0px 4px 0px;
+}
+
+td.taphover:hover, td.taphover.hover {
+    background-color: #81DAF5;
+};
