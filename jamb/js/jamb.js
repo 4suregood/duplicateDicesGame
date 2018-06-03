@@ -189,6 +189,7 @@ function isValidCell(cellId){
 }
 
 function processCellClick(cell){
+	alert("processCellClick cell=" + cell); 
 	var id = cell.attr("id");
 	var value = cell.html().trim();
 	if(isValidCell(id) && gClickCounter > 0){
