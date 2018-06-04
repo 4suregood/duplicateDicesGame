@@ -186,7 +186,8 @@ function processTabhover(cell){
 
 //traceList
 function log(msg){
-	 $("#traceList").append($("<li>").text(msg));
+	// un-comment to trace for debuging
+	 //$("#traceList").append($("<li>").text(msg));
 }
 
 function isValidCell(cellId){
