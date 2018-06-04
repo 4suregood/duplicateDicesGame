@@ -88,6 +88,8 @@ $('td.taphover').on({
     }
 });
 
+	var score = retrieveFinalScore();
+	$("#my_total").html(score);
 	// mobile
 	//$('td.taphover').on("touchstart", function (e) {
 	   // 'use strict'; //satisfy code inspectors
