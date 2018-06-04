@@ -592,10 +592,11 @@ function setup(bTestEnd){
 
 function getCurrentDiceNum(iSrcString) {
 	log("iSrcString=" + iSrcString);
-	var dotIndex = iSrcString.indexOf(".");
+	var dotIndex = iSrcString.indexOf(".gif");
 	log("dotIndex=" + dotIndex);
 	var currentDice = iSrcString.substring(dotIndex-2, dotIndex-1);
 	log("currentDice=" + currentDice);
+	log("end getCurrentDiceNum(iSrcString)");
 	return currentDice;
 }
 
