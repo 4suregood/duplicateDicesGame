@@ -184,12 +184,17 @@ function processTabhover(cell){
 	}
 }
 
+//traceList
+function log(msg){
+	 $("#traceList").append($("<li>").text(msg));
+}
+
 function isValidCell(cellId){
 	return cellId != null && cellId != "undefined" && cellId != "";
 }
 
 function processCellClick(cell){
-	alert("processCellClick cell=" + cell); 
+	//alert("processCellClick cell=" + cell);
 	var id = cell.attr("id");
 	var value = cell.html().trim();
 	if(isValidCell(id) && gClickCounter > 0){
@@ -429,6 +434,7 @@ function validDicesFun(){
 	var j = 0;
 	for (var i=0; i< gDices.length; i++){
 		if(isRed(i)){
+			log("gDices[" + i +"]=" + gDices[i]);
 			validDaces[j] = parseInt(gDices[i]);
 			j++;
 		}
@@ -584,9 +590,12 @@ function setup(bTestEnd){
 	}
 }
 
-function getCurrentDiceNum(src) {
-	var dotIndex = src.indexOf(".");
-	var currentDice = src.substring(dotIndex-2, dotIndex-1);
+function getCurrentDiceNum(iSrcString) {
+	log("iSrcString=" + iSrcString);
+	var dotIndex = iSrcString.indexOf(".");
+	log("dotIndex=" + dotIndex);
+	var currentDice = iSrcString.substring(dotIndex-2, dotIndex-1);
+	log("currentDice=" + currentDice);
 	return currentDice;
 }
 
@@ -595,13 +604,13 @@ function throwdices() {
 	for(var i=0; i < IMG_SELECTORS.length; i++){
 		var idSel = IMG_SELECTORS[i];
 		var image = $(idSel);
-		var src = image.attr('src');
-		var wIndex = src.indexOf("w.gif");
-		gDices[i]=getCurrentDiceNum(src);
+		var attrSrc = image.attr('src');
+		var wIndex = attrSrc.indexOf("w.gif");
+		gDices[i] = getCurrentDiceNum(attrSrc);
 		if(wIndex > 0){
 			var d = throwdice();//1 to 6
 			gDices[i]=d;//new value
-			var sub = src.substring(0, wIndex - 1);
+			var sub = attrSrc.substring(0, wIndex - 1);
 			var newSrc = sub + d + "w.gif"
 		 	image.attr('src', newSrc);
 		}
